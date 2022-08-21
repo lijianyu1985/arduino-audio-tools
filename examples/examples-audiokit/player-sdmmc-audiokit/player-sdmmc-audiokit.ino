@@ -11,12 +11,13 @@
 #include "AudioLibs/AudioSourceSdMmc.h"
 #include "AudioCodecs/CodecMP3Helix.h"
 
-const char *startFilePath="/";
+const char *startFilePath = "/";
 const char* ext="mp3";
 AudioSourceSdMmc source(startFilePath, ext);
 AudioKitStream kit;
 MP3DecoderHelix decoder;  // or change to MP3DecoderMAD
 AudioPlayer player(source, kit, decoder);
+ 
 
 void setup() {
   Serial.begin(115200);
@@ -29,13 +30,14 @@ void setup() {
 
 
   // setup player
-  player.setVolume(0.7);
+  player.setVolume(0.9);
   player.begin();
+  player.setAutoNext(false);
 
   // select file with setPath() or setIndex()
   //player.setPath("/ZZ Top/Unknown Album/Lowrider.mp3");
   //player.setIndex(1); // 2nd file
-
+  player.setPath("/mp3_128.mp3");
 }
 
 void loop() {

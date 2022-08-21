@@ -17,8 +17,8 @@ const char *urls[] = {
   "http://sunshineradio.ice.infomaniak.ch/sunshineradio-128.mp3",
   "http://streaming.swisstxt.ch/m/drsvirus/mp3_128"
 };
-const char *wifi = "wifi";
-const char *password = "password";
+const char *wifi = "H2C_2002";
+const char *password = "p@sswode";
 
 ICYStream urlStream(wifi, password);
 AudioSourceURL source(urlStream, urls, "audio/mp3");

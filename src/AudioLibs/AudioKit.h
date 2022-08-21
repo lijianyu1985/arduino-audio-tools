@@ -25,7 +25,7 @@ friend class AudioKitStream;
   audio_hal_adc_input_t input_device = AUDIOKIT_DEFAULT_INPUT;
   // set dac channel 
   audio_hal_dac_output_t output_device = AUDIOKIT_DEFAULT_OUTPUT;
-  int masterclock_pin = 0;
+  int masterclock_pin = 16;
   bool sd_active = true;
   bool default_actions_active = true;
 
